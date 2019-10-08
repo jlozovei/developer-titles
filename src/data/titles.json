@@ -106,9 +106,24 @@
       "color": "#3fc5fe"
     },
     {
-      "title": "Mid Wix Site Developer",
+      "title": "Sr Wix Site Developer",
       "background": "#2f4150",
       "color": "#9f26ab"
+    },
+    {
+      "title": "Copypasta Manager",
+      "background": "#CA5273",
+      "color": "#FFF2D8"
+    },
+    {
+      "title": "Quantic Microfrontend Specialist",
+      "background": "#1E184C",
+      "color": "#335F3B"
+    },
+    {
+      "title": "Sr Australian Stylesheets Developer",
+      "background": "#00843D",
+      "color": "#FFCD00"
     }
   ]
 }
