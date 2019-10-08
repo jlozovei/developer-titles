@@ -4,7 +4,14 @@
   "description": "Fictional developer titles",
   "main": "",
   "scripts": {
+    "clean-build": "rm -rf ./public/index.js",
+    "clean-deploy": "rm -rf ./public/README.md && rm -rf ./public/CNAME",
+    "clean": "npm run clean-build && npm run clean-deploy",
     "start": "webpack-dev-server",
+    "build": "webpack -p --mode production",
+    "predeploy": "cp ./README.md ./public && cp ./CNAME ./public && npm run build",
+    "deploy": "gh-pages -d public",
+    "postdeploy": "npm run clean"
   },
   "repository": {
     "type": "git",
