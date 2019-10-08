@@ -1,0 +1,114 @@
+{
+  "titles": [
+    {
+      "title": "HTML Programmer",
+      "background": "#E65D12",
+      "color": "#ffffff"
+    },
+    {
+      "title": "jQuery Artisan",
+      "background": "#141E30",
+      "color": "#ffffff"
+    },
+    {
+      "title": "Markdown Specialist Developer",
+      "background": "#f12711",
+      "color": "#ffffff"
+    },
+    {
+      "title": "Fullstack Front-end Developer",
+      "background": "#654ea3",
+      "color": "#ffffff"
+    },
+    {
+      "title": "Fullstack Game Developer",
+      "background": "#ad5389",
+      "color": "#ffffff"
+    },
+    {
+      "title": "UI Developer Specialist",
+      "background": "#dd1818",
+      "color": "#ffffff"
+    },
+    {
+      "title": "Jr FrontPage Specialist",
+      "background": "#22BE4B",
+      "color": "#ffffff"
+    },
+    {
+      "title": "JS Philosopher",
+      "background": "#F6A808",
+      "color": "#131415"
+    },
+    {
+      "title": "Sr Webmaster",
+      "background": "#CECC9E",
+      "color": "#131415"
+    },
+    {
+      "title": "Jr Web Designer",
+      "background": "#114B55",
+      "color": "#ffffff"
+    },
+    {
+      "title": "Automation Craftsman",
+      "background": "#9F9F9F",
+      "color": "#ffffff"
+    },
+    {
+      "title": "Sr Log Reader",
+      "background": "#FEC9B1",
+      "color": "#131415"
+    },
+    {
+      "title": "VanillaJS Guru",
+      "background": "#A31C0D",
+      "color": "#FDBC82"
+    },
+    {
+      "title": "Website Maker",
+      "background": "#4B335F",
+      "color": "#23C7EB"
+    },
+    {
+      "title": "Spaghetti Code Enthusiast",
+      "background": "#FDCF50",
+      "color": "#76040A"
+    },
+    {
+      "title": "Flash Trainee",
+      "background": "#5c2626",
+      "color": "#fe0000"
+    },
+    {
+      "title": "esreveR gnireenignE repoleveD",
+      "background": "#A8CFFE",
+      "color": "#0F0A58"
+    },
+    {
+      "title": "Head of Bug Development",
+      "background": "#232425",
+      "color": "#78F54A"
+    },
+    {
+      "title": "Brogrammer",
+      "background": "#1d1d56",
+      "color": "#c5438b"
+    },
+    {
+      "title": "Knockout Front-end Developer",
+      "background": "#6f0201",
+      "color": "#ffffff"
+    },
+    {
+      "title": "Jr PrimeFaces JSF Specialist",
+      "background": "#30383c",
+      "color": "#3fc5fe"
+    },
+    {
+      "title": "Mid Wix Site Developer",
+      "background": "#2f4150",
+      "color": "#9f26ab"
+    }
+  ]
+}

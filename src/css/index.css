@@ -1,0 +1,56 @@
+body,
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+body {
+  align-items: center;
+  background-color: #ffffff;
+  color: #131415;
+  transition: background-color ease 100ms;
+}
+
+.page {
+  padding: 1em;
+  width: 100%;
+  flex: 1;
+}
+
+.refresh {
+  text-align: right;
+  cursor: pointer;
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  font-size: responsive 2em 8em;
+  font-range: 18.75em 56em;
+  line-height: 1.2;
+  word-break: break-word;
+}
+
+nav {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 -0.25em;
+
+  h2 {
+    padding: 0.25em;
+  }
+
+  ul {
+    li {
+      display: inline-block;
+
+      a {
+        padding: 0.25em;
+      }
+    }
+  }
+}
