@@ -5,6 +5,10 @@
   "main": "",
   "scripts": {
     "start": "webpack-dev-server",
+    "build": "webpack -p --mode production",
+    "predeploy": "cp ./README.md ./public && cp ./CNAME ./public && npm run build",
+    "deploy": "gh-pages -d public",
+    "postdeploy": "rm -rf ./public/README.md && cp rm -rf ./public/CNAME"
   },
   "repository": {
     "type": "git",
