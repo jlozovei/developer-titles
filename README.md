@@ -31,6 +31,8 @@ After that, if your request doesn't offend anyone, your title will be able to be
 
 > For the colors, I like to use [colorion](http://colorion.co).
 
+If you're only looking for the titles, [here they are](https://github.com/jlozovei/developer-titles/blob/master/src/data/titles.json). :rocket:
+
 
 ## :warning: Disclaimer
 The goal here is to have fun. Don't use it to be a jerk on other people's work/job!
