@@ -124,6 +124,16 @@
       "title": "Sr Australian Stylesheets Developer",
       "background": "#00843D",
       "color": "#FFCD00"
+    },
+    {
+      "title": "Sr Web Developer Intern",
+      "background": "#666bad",
+      "color": "#bad666"
+    },
+    {
+      "title": "Fullstack Designer",
+      "background": "#bad666",
+      "color": "#666bad"
     }
   ]
 }
