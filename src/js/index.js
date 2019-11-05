@@ -9,12 +9,14 @@ import '../css/index.css';
   const app = {
     init() {
       this.cacheDOM();
+
+      window.goToTitle = this.goToTitle;
     },
 
     cacheDOM() {
       this.lastIndex = null;
 
-      this.titleContainer = document.querySelector('.title-container');
+      this.titleContainer = document.querySelector('.devtitle');
       this.refreshButton = document.querySelector('.refresh');
       this.shareLinkButton = document.querySelector('.share');
 
@@ -24,26 +26,69 @@ import '../css/index.css';
     bindEvents() {
       this.randomTitle();
 
-      this.refreshButton.addEventListener('click', () => this.randomTitle());
+      this.refreshButton.addEventListener('click', () =>
+        this.randomTitle()
+      );
     },
 
-    randomTitle() {
+    randomTitle(index) {
       const { titles } = data;
 
       const { length } = titles;
-      const randomInt = this.randomInt(0, length - 1);
+      const randomInt = !index
+        ? this.randomInt(0, length - 1)
+        : index;
+
       this.lastIndex = randomInt;
 
       const randomized = titles[randomInt];
 
-      this.titleContainer.innerHTML = randomized.title;
+      if (!randomized) return false;
+
+      this.titleContainer.querySelector('h1').innerHTML =
+        randomized.name;
       document.body.style.backgroundColor = randomized.background;
       document.body.style.color = randomized.color;
 
-      this.shareLinkButton.setAttribute('href', this.generateShareLink(randomized.title));
+      if (randomized.credits) {
+        const { credits } = randomized;
+
+        let htmlString = '';
+
+        htmlString += '<p>Credits to ';
+        if (credits.url)
+          htmlString += `<a href="${credits.url}" target="_blank" rel="noopener noreferrer">`;
+
+        htmlString += `${credits.name}`;
+
+        if (credits.url) htmlString += '</a>';
+
+        htmlString += '</p>';
+
+        this.titleContainer
+          .querySelector('.devtitle__credit')
+          .classList.add('devtitle__credit--visible');
+
+        this.titleContainer.querySelector(
+          '.devtitle__credit'
+        ).innerHTML = htmlString;
+      } else {
+        this.titleContainer
+          .querySelector('.devtitle__credit')
+          .classList.remove('devtitle__credit--visible');
+
+        this.titleContainer.querySelector(
+          '.devtitle__credit'
+        ).innerHTML = '';
+      }
+
+      this.shareLinkButton.setAttribute(
+        'href',
+        this.generateShareLink(randomized.name)
+      );
     },
 
-    generateShareLink(title) {
+    generateShareLink(titleName) {
       const options = {
         username: 'juliolozovei',
         hashtags: 'developer,developertitles',
@@ -51,15 +96,20 @@ import '../css/index.css';
       };
 
       return encodeURI(
-        `https://twitter.com/intent/tweet?url=${options.url}&text=I'm the "${title}". Check your title at Developer Titles&related=${options.username}&hashtags=${options.hashtags}`
+        `https://twitter.com/intent/tweet?url=${options.url}&text=I'm the "${titleName}". Check your title at Developer Titles&related=${options.username}&hashtags=${options.hashtags}`
       );
     },
 
     randomInt(min, max) {
-      const random = Math.floor(Math.random() * (max - min + 1)) + min;
+      const random =
+        Math.floor(Math.random() * (max - min + 1)) + min;
 
       if (random === this.lastIndex) return this.randomInt(min, max);
       else return random;
+    },
+
+    goToTitle(index) {
+      index && app.randomTitle(index);
     }
   };
 

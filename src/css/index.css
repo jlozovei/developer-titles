@@ -23,14 +23,30 @@ body {
   cursor: pointer;
 }
 
-.title-container {
+.devtitle {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
   flex: 1;
-  font-size: responsive 2em 8em;
-  font-range: 18.75em 56em;
-  line-height: 1.2;
-  word-break: break-word;
+
+  &__name {
+    font-size: responsive 2em 8em;
+    font-range: 18.75em 56em;
+    line-height: 1.2;
+    word-break: break-word;
+  }
+
+  &__credits {
+    p,
+    a {
+      font-size: 0.75em;
+    }
+
+    a {
+      text-decoration: underline;
+    }
+  }
 }
 
 nav {
