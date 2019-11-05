@@ -1,142 +1,142 @@
 {
   "titles": [
     {
-      "title": "HTML Programmer",
+      "name": "HTML Programmer",
       "background": "#E65D12",
       "color": "#ffffff"
     },
     {
-      "title": "jQuery Artisan",
+      "name": "jQuery Artisan",
       "background": "#141E30",
       "color": "#ffffff"
     },
     {
-      "title": "Markdown Specialist Developer",
+      "name": "Markdown Specialist Developer",
       "background": "#f12711",
       "color": "#ffffff"
     },
     {
-      "title": "Fullstack Front-end Developer",
+      "name": "Fullstack Front-end Developer",
       "background": "#654ea3",
       "color": "#ffffff"
     },
     {
-      "title": "Fullstack Game Developer",
+      "name": "Fullstack Game Developer",
       "background": "#ad5389",
       "color": "#ffffff"
     },
     {
-      "title": "UI Developer Specialist",
+      "name": "UI Developer Specialist",
       "background": "#dd1818",
       "color": "#ffffff"
     },
     {
-      "title": "Jr FrontPage Specialist",
+      "name": "Jr FrontPage Specialist",
       "background": "#22BE4B",
       "color": "#ffffff"
     },
     {
-      "title": "JS Philosopher",
+      "name": "JS Philosopher",
       "background": "#F6A808",
       "color": "#131415"
     },
     {
-      "title": "Sr Webmaster",
+      "name": "Sr Webmaster",
       "background": "#CECC9E",
       "color": "#131415"
     },
     {
-      "title": "Jr Web Designer",
+      "name": "Jr Web Designer",
       "background": "#114B55",
       "color": "#ffffff"
     },
     {
-      "title": "Automation Craftsman",
+      "name": "Automation Craftsman",
       "background": "#9F9F9F",
       "color": "#ffffff"
     },
     {
-      "title": "Sr Log Reader",
+      "name": "Sr Log Reader",
       "background": "#FEC9B1",
       "color": "#131415"
     },
     {
-      "title": "VanillaJS Guru",
+      "name": "VanillaJS Guru",
       "background": "#A31C0D",
       "color": "#FDBC82"
     },
     {
-      "title": "Website Maker",
+      "name": "Website Maker",
       "background": "#4B335F",
       "color": "#23C7EB"
     },
     {
-      "title": "Spaghetti Code Enthusiast",
+      "name": "Spaghetti Code Enthusiast",
       "background": "#FDCF50",
       "color": "#76040A"
     },
     {
-      "title": "Flash Trainee",
+      "name": "Flash Trainee",
       "background": "#5c2626",
       "color": "#fe0000"
     },
     {
-      "title": "esreveR gnireenignE repoleveD",
+      "name": "esreveR gnireenignE repoleveD",
       "background": "#A8CFFE",
       "color": "#0F0A58"
     },
     {
-      "title": "Head of Bug Development",
+      "name": "Head of Bug Development",
       "background": "#232425",
       "color": "#78F54A"
     },
     {
-      "title": "Brogrammer",
+      "name": "Brogrammer",
       "background": "#1d1d56",
       "color": "#c5438b"
     },
     {
-      "title": "Knockout Front-end Developer",
+      "name": "Knockout Front-end Developer",
       "background": "#6f0201",
       "color": "#ffffff"
     },
     {
-      "title": "Jr PrimeFaces JSF Specialist",
+      "name": "Jr PrimeFaces JSF Specialist",
       "background": "#30383c",
       "color": "#3fc5fe"
     },
     {
-      "title": "Sr Wix Site Developer",
+      "name": "Sr Wix Site Developer",
       "background": "#2f4150",
       "color": "#9f26ab"
     },
     {
-      "title": "Copypasta Manager",
+      "name": "Copypasta Manager",
       "background": "#CA5273",
       "color": "#FFF2D8"
     },
     {
-      "title": "Quantic Microfrontend Specialist",
+      "name": "Quantic Microfrontend Specialist",
       "background": "#1E184C",
       "color": "#335F3B"
     },
     {
-      "title": "Sr Australian Stylesheets Developer",
+      "name": "Sr Australian Stylesheets Developer",
       "background": "#00843D",
       "color": "#FFCD00"
     },
     {
-      "title": "Sr Web Developer Intern",
+      "name": "Sr Web Developer Intern",
       "background": "#666bad",
       "color": "#bad666"
     },
     {
-      "title": "Fullstack Designer",
+      "name": "Fullstack Designer",
       "background": "#bad666",
       "color": "#666bad"
     },
     {
-      "title": "Linux Exorcist",
+      "name": "Linux Exorcist",
       "background": "#050607",
       "color": "#ffffff",
       "credits": {
