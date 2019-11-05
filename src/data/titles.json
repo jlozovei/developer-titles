@@ -134,6 +134,15 @@
       "title": "Fullstack Designer",
       "background": "#bad666",
       "color": "#666bad"
+    },
+    {
+      "title": "Linux Exorcist",
+      "background": "#050607",
+      "color": "#ffffff",
+      "credits": {
+        "name": "Horacio Leon",
+        "url": "https://www.linkedin.com/in/horacioleonencina/"
+      }
     }
   ]
 }
