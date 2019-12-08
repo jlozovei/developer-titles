@@ -26,18 +26,15 @@ import '../css/index.css';
     bindEvents() {
       this.randomTitle();
 
-      this.refreshButton.addEventListener('click', () =>
-        this.randomTitle()
-      );
+      this.refreshButton.addEventListener('click', () => this.randomTitle());
     },
 
     randomTitle(index) {
+      // fix for 0 index
+      const fixIndex = index == 0 ? '0' : index;
       const { titles } = data;
-
       const { length } = titles;
-      const randomInt = !index
-        ? this.randomInt(0, length - 1)
-        : index;
+      const randomInt = !fixIndex ? this.randomInt(0, length - 1) : fixIndex;
 
       this.lastIndex = randomInt;
 
@@ -45,10 +42,13 @@ import '../css/index.css';
 
       if (!randomized) return false;
 
-      this.titleContainer.querySelector('h1').innerHTML =
-        randomized.name;
-      document.body.style.backgroundColor = randomized.background;
-      document.body.style.color = randomized.color;
+      this.titleContainer.querySelector('h1').innerHTML = randomized.name;
+
+      if (randomized.background) document.body.style.backgroundColor = randomized.background;
+      else document.body.removeAttribute('style');
+
+      if (randomized.color) document.body.style.color = randomized.color;
+      else document.body.removeAttribute('style');
 
       if (randomized.credits) {
         const { credits } = randomized;
@@ -69,23 +69,16 @@ import '../css/index.css';
           .querySelector('.devtitle__credit')
           .classList.add('devtitle__credit--visible');
 
-        this.titleContainer.querySelector(
-          '.devtitle__credit'
-        ).innerHTML = htmlString;
+        this.titleContainer.querySelector('.devtitle__credit').innerHTML = htmlString;
       } else {
         this.titleContainer
           .querySelector('.devtitle__credit')
           .classList.remove('devtitle__credit--visible');
 
-        this.titleContainer.querySelector(
-          '.devtitle__credit'
-        ).innerHTML = '';
+        this.titleContainer.querySelector('.devtitle__credit').innerHTML = '';
       }
 
-      this.shareLinkButton.setAttribute(
-        'href',
-        this.generateShareLink(randomized.name)
-      );
+      this.shareLinkButton.setAttribute('href', this.generateShareLink(randomized.name));
     },
 
     generateShareLink(titleName) {
@@ -101,15 +94,14 @@ import '../css/index.css';
     },
 
     randomInt(min, max) {
-      const random =
-        Math.floor(Math.random() * (max - min + 1)) + min;
+      const random = Math.floor(Math.random() * (max - min + 1)) + min;
 
       if (random === this.lastIndex) return this.randomInt(min, max);
       else return random;
     },
 
     goToTitle(index) {
-      index && app.randomTitle(index);
+      app.randomTitle(index);
     }
   };
 
