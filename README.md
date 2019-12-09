@@ -34,6 +34,36 @@ After that, if your request doesn't offend anyone, your title will be able to be
 If you're only looking for the titles, [here they are](https://github.com/jlozovei/developer-titles/blob/master/src/data/titles.json). :rocket:
 
 
+## :computer: Developing
+After forking and cloning the project in your local environment, run the following commands:
+
+```bash
+# install dependencies
+yarn
+# or npm i
+
+# run the project at localhost:8000
+yarn start
+# or npm start
+```
+
+To add a new title, go to [`src/data/titles.json`](https://github.com/jlozovei/developer-titles/blob/master/src/data/titles.json) and add a new title object to the array. It's important the title to have, at least, the `name` key - because if the title hasn't a name, then it shouldn't be here; `background`, `color` and `credits` keys are optional.
+
+Here's how a new title object should look:
+
+```json
+{
+  "name": "Your title name",
+  "background": "Your title hex background",
+  "color": "Your title hex background",
+  "credits": {
+    "name": "Who you want to credit (name, nick or slug)",
+    "url": "The person's profile URL (linkedin, github...)"
+  }
+}
+```
+
+
 ## :warning: Disclaimer
 The goal here is to have fun. Don't use it to be a jerk on other people's work/job!
 
