@@ -1,6 +1,6 @@
-# Developer Titles
+# :boom: Developer Titles
 
-`['fictional', 'awesome', 'random', 'funny', 'obsolete']` developer titles :tada:
+> `['fictional', 'awesome', 'random', 'funny', 'obsolete']` developer titles
 
 
 ## :scroll: About
