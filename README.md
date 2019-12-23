@@ -2,6 +2,10 @@
 
 > `['fictional', 'awesome', 'random', 'funny', 'obsolete']` developer titles
 
+<br />
+<a href="https://www.producthunt.com/posts/developer-titles?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-developer-titles" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=178863&theme=dark" alt="Developer Titles - Awesome developer titles for bios, descriptions and statuses | Product Hunt Embed" style="width: 250px; height: 54px;" width="250px" height="54px" /></a>
+<br />
+
 
 ## :scroll: About
 After years viewing crazy job and developer titles on social media, I've decided to merge them in a single website.
