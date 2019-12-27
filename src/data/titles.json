@@ -143,6 +143,15 @@
         "name": "Horacio Leon",
         "url": "https://www.linkedin.com/in/horacioleonencina/"
       }
+    },
+    {
+      "name": "Glorious Coder",
+      "background": "#5e7bf8",
+      "color": "#ffffff",
+      "credits": {
+        "name": "Rafael Camargo",
+        "url": "https://glorious.codes/"
+      }
     }
   ]
 }
