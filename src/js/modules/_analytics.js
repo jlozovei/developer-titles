@@ -5,23 +5,23 @@ const analytics = {
 
   createTag() {
     const script = document.createElement('script');
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.ANALYTICS_ID}`;
+    script.src = 'https://www.google-analytics.com/analytics.js';
     script.async = true;
-    script.onload = this.createDataLayer();
+    script.onload = this.createInstance();
 
     document.body.appendChild(script);
   },
 
-  createDataLayer() {
-    window.dataLayer = window.dataLayer || [];
+  createInstance() {
+    window.ga =
+      window.ga ||
+      function() {
+        (ga.q = ga.q || []).push(arguments);
+      };
+    ga.l = +new Date();
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', process.env.ANALYTICS_ID);
+    ga('create', process.env.ANALYTICS_ID, 'auto');
+    ga('send', 'pageview');
   },
 
   sendEvent(meta) {
@@ -29,7 +29,7 @@ const analytics = {
       return setTimeout(() => analytics.sendEvent(meta), 500);
     }
 
-    return ga('send', 'event', meta);
+    return ga('send', meta);
   }
 };
 
