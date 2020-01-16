@@ -5,12 +5,19 @@ import data from '../data/titles.json';
 import '../css/reset.css';
 import '../css/index.css';
 
+// analytics
+import analytics from './modules/_analytics';
+
 (() => {
   const app = {
     init() {
-      this.cacheDOM();
+      this.isLocal = location.href.includes('localhost') || location.href.includes('127.0.0.1');
+
+      !this.isLocal && analytics.init();
 
       window.goToTitle = this.goToTitle;
+
+      this.cacheDOM();
     },
 
     cacheDOM() {
@@ -18,7 +25,7 @@ import '../css/index.css';
 
       this.titleContainer = document.querySelector('.devtitle');
       this.refreshButton = document.querySelector('.refresh');
-      this.shareLinkButton = document.querySelector('.share');
+      this.tweetButton = document.querySelector('.tweet');
 
       this.bindEvents();
     },
@@ -78,7 +85,16 @@ import '../css/index.css';
         this.titleContainer.querySelector('.devtitle__credit').innerHTML = '';
       }
 
-      this.shareLinkButton.setAttribute('href', this.generateShareLink(randomized.name));
+      this.tweetButton.setAttribute('href', this.generateShareLink(randomized.name));
+
+      if (!this.isLocal) {
+        analytics.sendEvent({
+          hitType: 'event',
+          eventCategory: 'Title',
+          eventAction: 'Random title',
+          eventLabel: randomized.name
+        });
+      }
     },
 
     generateShareLink(titleName) {
