@@ -48,7 +48,7 @@ After forking and cloning the project in your local environment, run the followi
 npm i
 # or yarn
 
-# run the project at localhost:8000
+# run the project at localhost:9000
 npm start
 # or yarn start
 ```
