@@ -80,6 +80,7 @@ When I was creating this site, I faced some related content on the internet. Lik
 - [Pseudo Design Titles](https://designtitles.com/)
 - [bullshit job titles generator](https://bullg.it/bullshit-job-titles/)
 - [@kutyel/superb-developer-titles](https://github.com/kutyel/superb-developer-titles)
+- [Silicon Valley Job Title Generator](https://siliconvalleyjobtitlegenerator.tumblr.com/)
 
 
 ## :closed_lock_with_key: License
