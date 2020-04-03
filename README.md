@@ -14,20 +14,22 @@ After years viewing crazy job and developer titles on social media, I've decided
 ## :gem: Stack
 This site is create using [Vanilla JS](http://vanilla-js.com/) (ES6) and [PostCSS](https://postcss.org/), with [Webpack](https://webpack.js.org/). It uses [GitHub Pages](https://pages.github.com/).
 
-I like to use [yarn](https://yarnpkg.com) as the package manager, but feel free to use wether you want (npm || yarn).
+I'm using [npm](https://npmjs.com) as the package manager.
 
 > Oh but why not creating it with React or Vue?
 >> Because I didn't want to :smile:
 
 
 ## :pencil: Contributing
-If you want to add some titles, follow the steps below:
+You can contribute to this project following the steps below:
 
 - Fork the repo
 - Create a new branch
 - Do the work
 - Fill a PR, assign it to you and, if possible, write a cool description
 - Wait for the review
+
+Also, take a look at the [contributing guide](https://github.com/jlozovei/developer-titles/blob/master/.github/CONTRIBUTING.md)!
 
 After that, if your request doesn't offend anyone, your title will be able to be part of the great array.
 
@@ -43,12 +45,12 @@ After forking and cloning the project in your local environment, run the followi
 
 ```bash
 # install dependencies
-yarn
-# or npm i
+npm i
+# or yarn
 
 # run the project at localhost:8000
-yarn start
-# or npm start
+npm start
+# or yarn start
 ```
 
 To add a new title, go to [`src/data/titles.json`](https://github.com/jlozovei/developer-titles/blob/master/src/data/titles.json) and add a new title object to the array. It's important the title to have, at least, the `name` key - because if the title hasn't a name, then it shouldn't be here; `background`, `color` and `credits` keys are optional.
