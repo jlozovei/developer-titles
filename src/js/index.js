@@ -27,6 +27,9 @@ import analytics from './modules/_analytics';
       this.refreshButton = document.querySelector('.refresh');
       this.tweetButton = document.querySelector('.tweet');
 
+      this.aboutButton = document.querySelectorAll('.about-btn');
+      this.aboutModal = document.querySelector('.about');
+
       this.bindEvents();
     },
 
@@ -34,6 +37,24 @@ import analytics from './modules/_analytics';
       this.randomTitle();
 
       this.refreshButton.addEventListener('click', () => this.randomTitle());
+
+      for (const button of this.aboutButton) {
+        button.addEventListener('click', () => {
+          this.toggleAboutModal();
+        });
+      }
+    },
+
+    toggleAboutModal() {
+      const isActive = this.aboutModal.classList.contains('about--active');
+
+      if (!isActive) {
+        this.aboutModal.classList.add('about--active');
+        this.aboutModal.setAttribute('aria-hidden', false);
+      } else {
+        this.aboutModal.classList.remove('about--active');
+        this.aboutModal.setAttribute('aria-hidden', true);
+      }
     },
 
     randomTitle(index) {
@@ -51,8 +72,13 @@ import analytics from './modules/_analytics';
 
       this.titleContainer.querySelector('h1').innerHTML = randomized.name;
 
-      if (randomized.background) document.body.style.backgroundColor = randomized.background;
-      else document.body.removeAttribute('style');
+      if (randomized.background) {
+        document.body.style.backgroundColor = randomized.background;
+        this.aboutModal.style.backgroundColor = randomized.background;
+      } else {
+        document.body.removeAttribute('style');
+        this.aboutModal.removeAttribute('style');
+      }
 
       if (randomized.color) document.body.style.color = randomized.color;
       else document.body.removeAttribute('style');
