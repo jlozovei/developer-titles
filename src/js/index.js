@@ -5,8 +5,10 @@ import data from '../data/titles.json';
 import '../css/reset.css';
 import '../css/index.css';
 
-// analytics
-import analytics from './modules/_analytics';
+// modules
+import analytics from './modules/analytics';
+import randomInt from './modules/randomInt';
+import shareLink from './modules/shareLink';
 
 (() => {
   const app = {
@@ -27,6 +29,9 @@ import analytics from './modules/_analytics';
       this.refreshButton = document.querySelector('.refresh');
       this.tweetButton = document.querySelector('.tweet');
 
+      this.aboutButton = document.querySelectorAll('.about-btn');
+      this.aboutModal = document.querySelector('.about');
+
       this.bindEvents();
     },
 
@@ -34,6 +39,24 @@ import analytics from './modules/_analytics';
       this.randomTitle();
 
       this.refreshButton.addEventListener('click', () => this.randomTitle());
+
+      for (const button of this.aboutButton) {
+        button.addEventListener('click', () => {
+          this.toggleAboutModal();
+        });
+      }
+    },
+
+    toggleAboutModal() {
+      const isActive = this.aboutModal.classList.contains('about--active');
+
+      if (!isActive) {
+        this.aboutModal.classList.add('about--active');
+        this.aboutModal.setAttribute('aria-hidden', false);
+      } else {
+        this.aboutModal.classList.remove('about--active');
+        this.aboutModal.setAttribute('aria-hidden', true);
+      }
     },
 
     randomTitle(index) {
@@ -41,18 +64,23 @@ import analytics from './modules/_analytics';
       const fixIndex = index == 0 ? '0' : index;
       const { titles } = data;
       const { length } = titles;
-      const randomInt = !fixIndex ? this.randomInt(0, length - 1) : fixIndex;
+      const random = !fixIndex ? randomInt(this.lastIndex, 0, length - 1) : fixIndex;
 
-      this.lastIndex = randomInt;
+      this.lastIndex = random;
 
-      const randomized = titles[randomInt];
+      const randomized = titles[random];
 
       if (!randomized) return false;
 
       this.titleContainer.querySelector('h1').innerHTML = randomized.name;
 
-      if (randomized.background) document.body.style.backgroundColor = randomized.background;
-      else document.body.removeAttribute('style');
+      if (randomized.background) {
+        document.body.style.backgroundColor = randomized.background;
+        this.aboutModal.style.backgroundColor = randomized.background;
+      } else {
+        document.body.removeAttribute('style');
+        this.aboutModal.removeAttribute('style');
+      }
 
       if (randomized.color) document.body.style.color = randomized.color;
       else document.body.removeAttribute('style');
@@ -85,7 +113,7 @@ import analytics from './modules/_analytics';
         this.titleContainer.querySelector('.devtitle__credit').innerHTML = '';
       }
 
-      this.tweetButton.setAttribute('href', this.generateShareLink(randomized.name));
+      this.tweetButton.setAttribute('href', shareLink(randomized.name));
 
       if (!this.isLocal) {
         analytics.sendEvent({
@@ -95,25 +123,6 @@ import analytics from './modules/_analytics';
           eventLabel: randomized.name
         });
       }
-    },
-
-    generateShareLink(titleName) {
-      const options = {
-        username: 'juliolozovei',
-        hashtags: 'developer,developertitles',
-        url: 'https://developertitles.com/'
-      };
-
-      return encodeURI(
-        `https://twitter.com/intent/tweet?url=${options.url}&text=I'm the "${titleName}". Check your title at Developer Titles&related=${options.username}&hashtags=${options.hashtags}`
-      );
-    },
-
-    randomInt(min, max) {
-      const random = Math.floor(Math.random() * (max - min + 1)) + min;
-
-      if (random === this.lastIndex) return this.randomInt(min, max);
-      else return random;
     },
 
     goToTitle(index) {

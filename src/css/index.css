@@ -19,7 +19,7 @@ body {
 }
 
 .refresh {
-  text-align: right;
+  align-self: flex-end;
   cursor: pointer;
 }
 
@@ -49,6 +49,51 @@ body {
   }
 }
 
+.about {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  padding: 4rem 1rem 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease-in-out 200ms;
+  z-index: 2;
+  overflow: auto;
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  h2 {
+    margin-bottom: 4rem;
+    font-size: 4rem;
+  }
+
+  p {
+    margin-bottom: 1.125rem;
+    font-size: 1.875rem;
+    line-height: calc(100% + 8px);
+  }
+
+  a {
+    font-weight: bold;
+  }
+
+  button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+  }
+}
+
 nav {
   display: flex;
   flex-flow: row wrap;
@@ -64,8 +109,11 @@ nav {
     li {
       display: inline-block;
 
-      a {
+      a,
+      button {
+        cursor: pointer;
         padding: 0.25em;
+        text-decoration: underline;
       }
     }
   }
