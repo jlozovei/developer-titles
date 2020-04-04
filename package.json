@@ -4,6 +4,7 @@
   "description": "Fictional developer titles",
   "main": "",
   "scripts": {
+    "test": "jest",
     "start": "webpack-dev-server",
     "prebuild": "cp ./README.md ./public && cp ./CNAME ./public",
     "build": "webpack -p --mode production"
@@ -28,6 +29,7 @@
     "eslint": "^6.5.1",
     "eslint-config-prettier": "^6.4.0",
     "eslint-plugin-prettier": "^3.1.1",
+    "jest": "^25.2.7",
     "postcss-loader": "^3.0.0",
     "prettier": "^1.18.2",
     "style-loader": "^1.0.0",
