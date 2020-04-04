@@ -64,7 +64,7 @@ import shareLink from './modules/shareLink';
       const fixIndex = index == 0 ? '0' : index;
       const { titles } = data;
       const { length } = titles;
-      const random = !fixIndex ? randomInt(this.lastIndex, 0, length - 1) : fixIndex;
+      const random = !fixIndex ? randomInt(0, length - 1, this.lastIndex) : fixIndex;
 
       this.lastIndex = random;
 
