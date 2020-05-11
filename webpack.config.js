@@ -1,6 +1,5 @@
 const webpack = require('webpack');
 const path = require('path');
-const dotenv = require('dotenv-webpack');
 
 const config = {
   devServer: {
@@ -13,7 +12,6 @@ const config = {
     path: path.resolve(__dirname, 'public'),
     filename: 'index.js'
   },
-  plugins: [new dotenv()],
   module: {
     rules: [
       {
