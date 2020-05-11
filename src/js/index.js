@@ -13,10 +13,6 @@ import shareLink from './modules/shareLink';
 (() => {
   const app = {
     init() {
-      this.isLocal = location.href.includes('localhost') || location.href.includes('127.0.0.1');
-
-      !this.isLocal && analytics.init();
-
       window.goToTitle = this.goToTitle;
 
       this.cacheDOM();
@@ -115,14 +111,10 @@ import shareLink from './modules/shareLink';
 
       this.tweetButton.setAttribute('href', shareLink(randomized.name));
 
-      if (!this.isLocal) {
-        analytics.sendEvent({
-          hitType: 'event',
-          eventCategory: 'Title',
-          eventAction: 'Random title',
-          eventLabel: randomized.name
-        });
-      }
+      analytics.sendEvent('Random title', {
+        event_category: 'Title',
+        event_label: randomized.name
+      });
     },
 
     goToTitle(index) {
