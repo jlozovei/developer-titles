@@ -73,6 +73,8 @@ Here's how a new title object should look:
 ## :warning: Disclaimer
 The goal here is to have fun. Don't use it to be a jerk on other people's work/job!
 
+> Have fun, stay cold!
+
 
 ## :boom: Inspiration and Related Work
 When I was creating this site, I faced some related content on the internet. Like:
