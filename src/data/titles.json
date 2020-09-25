@@ -62,8 +62,8 @@
     },
     {
       "name": "VanillaJS Guru",
-      "background": "#A31C0D",
-      "color": "#FDBC82"
+      "background": "#f0d91c",
+      "color": "black"
     },
     {
       "name": "Website Maker",
@@ -152,6 +152,20 @@
         "name": "Rafael Camargo",
         "url": "https://glorious.codes/"
       }
+    },
+    {
+      "name": "WordPress Almighty Father",
+      "background": "white",
+      "color": "#117ac9",
+      "credits": {
+        "name": "Celso Fabri Jr",
+        "url": "https://celsofabri.github.io/"
+      }
+    },
+    {
+      "name": "Code wizardry creator",
+      "background": "#592b83",
+      "color": "#f49820"
     }
   ]
 }
