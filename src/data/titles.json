@@ -176,6 +176,11 @@
       "name": "BBQ Developer",
       "background": "#402828",
       "color": "#debe17"
+    },
+    {
+      "name": "Button Painter Engineer",
+      "background": "#6D9886",
+      "color": "#F6F6F6"
     }
   ]
 }
