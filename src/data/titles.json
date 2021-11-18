@@ -180,7 +180,11 @@
     {
       "name": "Button Painter Engineer",
       "background": "#6D9886",
-      "color": "#F6F6F6"
+      "color": "#F6F6F6",
+      "credits": {
+        "name": "Lucas Viana (Baú)",
+        "url": "https://lucasviana.dev/"
+      }
     }
   ]
 }
