@@ -1,13 +1,13 @@
 {
   "name": "developer-titles",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Fictional developer titles",
   "main": "",
   "scripts": {
     "test": "jest",
     "start": "webpack-dev-server",
     "prebuild": "cp ./README.md ./public && cp ./CNAME ./public",
-    "build": "webpack -p --mode production"
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
