@@ -30,3 +30,8 @@ selenium-debug.log
 
 # Design files
 design/
+
+# Build files
+public/*.js
+public/*.md
+public/CNAME
