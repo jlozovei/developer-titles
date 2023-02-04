@@ -8,6 +8,7 @@ const config = {
     port: 9000
   },
   entry: './src/js/index.js',
+  mode: 'production',
   output: {
     path: path.resolve(__dirname, 'public'),
     filename: 'index.js'
