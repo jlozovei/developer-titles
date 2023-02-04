@@ -1,7 +1,3 @@
 module.exports = {
-  plugins: [
-    require('autoprefixer'),
-    require('precss'),
-    require('rucksack-css')
-  ]
+  plugins: [require('autoprefixer'), require('precss'), require('rucksack-css')]
 };
