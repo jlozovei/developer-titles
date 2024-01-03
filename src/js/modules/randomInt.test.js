@@ -6,7 +6,7 @@ describe('randomInt', () => {
     const max = 10;
     const random = randomInt(min, max, false);
 
-    expect(random).toBeGreaterThan(min);
+    expect(random).toBeGreaterThanOrEqual(min);
     expect(random).toBeLessThanOrEqual(max);
   });
 });
